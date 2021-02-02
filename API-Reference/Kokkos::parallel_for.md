@@ -88,12 +88,12 @@ struct Foo {
   void operator() (const TagA, const Kokkos::TeamPolicy<>::member_type& team) const {
     printf("Greetings from thread %i of team %i with TagA\n",
             team.thread_rank(),team.league_rank());
-  };
+  }
   KOKKOS_INLINE_FUNCTION
   void operator() (const TagB, const Kokkos::TeamPolicy<>::member_type& team) const {
     printf("Greetings from thread %i of team %i with TagB\n",
             team.thread_rank(),team.league_rank());
-  };
+  }
 };
 
 int main(int argc, char* argv[]) {
